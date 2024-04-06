@@ -1,6 +1,5 @@
 #!/bin/bash
 set -euo pipefail
-set -x
 cd /opt/icefox
 source ./shared.sh
 
