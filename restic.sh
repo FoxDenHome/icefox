@@ -7,5 +7,5 @@ runx() {
     "$CMD" "$@"
 }
 
-#runx 's3:s3.us-west-001.backblazeb2.com/icefox-backups' "$@"
+runx 's3:s3.us-west-001.backblazeb2.com/icefox-backups' "$@"
 runx '/mnt/ztank/local/restic' "$@"
