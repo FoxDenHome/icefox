@@ -5,6 +5,7 @@ source ./shared.sh
 
 ./decrypt.sh keyfile
 ./decrypt.sh zfs_keyfile
+./decrypt.sh restic-config.sh
 
 cryptsetup open /dev/disk/by-uuid/c2b33a7d-8c06-42da-9928-98667f16c6c9 docker --key-file=/mnt/keydisk/keyfile
 mount /dev/mapper/docker /var/lib/docker
