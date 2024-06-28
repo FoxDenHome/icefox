@@ -10,6 +10,8 @@ source ./shared.sh
 cryptsetup open /dev/disk/by-uuid/c2b33a7d-8c06-42da-9928-98667f16c6c9 docker --key-file=/mnt/keydisk/keyfile
 mount /dev/mapper/docker /var/lib/docker
 
+
+zpool import -d /dev/disk/by-id -a
 zdone() {
     exit 0
 }
