@@ -13,6 +13,9 @@ mount /dev/mapper/docker /var/lib/docker
 
 zpool import -d /dev/disk/by-id -a
 zdone() {
+    mount --bind /mnt/ztank/local/torrent /mnt/zhdd/nas/torrent
+    mount --bind /mnt/ztank/local/usenet /mnt/zhdd/nas/usenet
+
     exit 0
 }
 
