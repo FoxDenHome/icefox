@@ -1,4 +1,5 @@
 #!/bin/bash
+# 0 */3 * * * /bin/sh -c 'sleep $[RANDOM%60]m && screen -dmS sync-arch /opt/icefox/sync-arch.sh'
 #
 ########
 #
