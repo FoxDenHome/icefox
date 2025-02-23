@@ -1,11 +1,13 @@
 #!/bin/sh
 
 runx() {
-    export REPO="$1"
-    export CMD="$2"
-    shift 2
+    export CMD="$1"
+    shift 1
     "$CMD" "$@"
 }
 
-runx 's3:s3.us-west-001.backblazeb2.com/icefox-backups' "$@"
-runx '/mnt/ztank/local/restic' "$@"
+export RESTIC_REPOSITORY='s3:s3.us-west-001.backblazeb2.com/icefox-backups'
+runx "$@"
+
+export RESTIC_REPOSITORY='/mnt/ztank/local/restic'
+runx "$@"
