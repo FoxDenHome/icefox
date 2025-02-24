@@ -1,6 +1,6 @@
 [Unit]
 Description=Crypt mount
-After=local-fs.target zfs-mount.service zfs-import-cache.service
+After=local-fs.target network-online.target zfs-mount.service zfs-import-cache.service
 Before=remote-fs.target docker.service libvirtd.service smbd.service nmbd.service
 
 [Service]
